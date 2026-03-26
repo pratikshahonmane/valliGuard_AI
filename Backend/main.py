@@ -35,6 +35,15 @@ app = FastAPI(
     version="1.0.0"
 )
 
+# ✅ CORS ADDED HERE
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # allow React frontend (dev)
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 # ── Schemas ────────────────────────────────────────────────────────────────────
 class TransactionRequest(BaseModel):
     step: int = Field(..., description="Hour of simulation (1–744)", example=1)

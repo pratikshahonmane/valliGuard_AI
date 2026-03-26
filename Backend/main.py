@@ -5,6 +5,7 @@ FastAPI production service with real ML model inference
 
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field, validator
+from fastapi.middleware.cors import CORSMiddleware
 import numpy as np
 import joblib
 import os

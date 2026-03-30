@@ -53,7 +53,7 @@ const RiskAnalyzer = () => {
   newbalanceDest: formData.newbalanceDest === '' ? 0 : Number(formData.newbalanceDest)
 };
 
-      const response = await fetch('http://:3000/predict', {
+      const response = await fetch('http://13.235.68.119:3000/predict', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)

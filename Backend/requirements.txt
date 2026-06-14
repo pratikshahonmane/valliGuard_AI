@@ -6,3 +6,7 @@ numpy
 joblib
 pydantic
 shap
+openpyxl
+python-multipart
+boto3
+sagemaker

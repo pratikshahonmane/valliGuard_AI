@@ -12,3 +12,16 @@ export const predictRisk = async (payload) => {
   return response.data;
 };
 
+export const bulkPredictRisk = async (file) => {
+  const formData = new FormData();
+  formData.append("file", file);
+  
+  const response = await axios.post("http://localhost:8001/bulk-predict", formData, {
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+  });
+  return response.data;
+};
+
+
